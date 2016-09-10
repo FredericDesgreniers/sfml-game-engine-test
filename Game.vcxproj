@@ -129,7 +129,9 @@
     <ClCompile Include="button.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="gameView.cpp" />
+    <ClCompile Include="GridPosition.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="map.cpp" />
     <ClCompile Include="renderer.cpp" />
     <ClCompile Include="titleView.cpp" />
     <ClCompile Include="view.cpp" />
@@ -138,6 +140,8 @@
     <ClInclude Include="Button.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="gameView.h" />
+    <ClInclude Include="gridPosition.h" />
+    <ClInclude Include="map.h" />
     <ClInclude Include="renderer.h" />
     <ClInclude Include="titleView.h" />
     <ClInclude Include="view.h" />

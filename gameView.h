@@ -1,5 +1,6 @@
 #pragma once
 #include "view.h"
+#include "map.h"
 
 namespace ViewEngine
 {
@@ -11,5 +12,8 @@ namespace ViewEngine
 		void update(sf::RenderWindow* rWindow);
 		void initialize(sf::RenderWindow* rWindow);
 		void buttonPressed(Button* button);
+
+	private:
+		GameEngine::Map map;
 	};
 }
