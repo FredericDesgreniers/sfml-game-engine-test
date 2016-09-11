@@ -1,6 +1,7 @@
 #pragma once
 #include "view.h"
 #include "map.h"
+#include "entity.h"
 
 namespace ViewEngine
 {
@@ -15,5 +16,6 @@ namespace ViewEngine
 
 	private:
 		GameEngine::Map map;
+		GameEngine::Entity player;
 	};
 }
