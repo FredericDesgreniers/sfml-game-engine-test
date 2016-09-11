@@ -16,7 +16,7 @@ int Entity::getPosY()
 
 int Entity::getPosX()
 {
-	return posY;
+	return posX;
 }
 
 float Entity::getHealth()
@@ -40,10 +40,3 @@ void Entity::moveUp(int l)
 {
 	posY--;
 }
-
-
-
-
-
-
-

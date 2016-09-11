@@ -13,7 +13,7 @@ namespace ViewEngine
 		void update(sf::RenderWindow* rWindow);
 		void initialize(sf::RenderWindow* rWindow);
 		void buttonPressed(Button* button);
-
+		void keyPressed(sf::Event::KeyEvent keyEvent);
 	private:
 		GameEngine::Map map;
 		GameEngine::Entity player;

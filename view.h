@@ -3,6 +3,8 @@
 #include <SFML/Graphics/Font.hpp>
 #include "Button.h"
 #include "game.h"
+#include <SFML/Window/Event.hpp>
+
 namespace MainEngine
 {
 	class Game;
@@ -20,8 +22,12 @@ namespace ViewEngine
 
 		void setChildView(View* view);
 		
-		void onLeftMousePress(sf::Vector2i pos);
+		//inputs
+		virtual	void onLeftMousePress(sf::Vector2i pos);
 		virtual void buttonPressed(Button* button);
+		virtual void keyPressed(sf::Event::KeyEvent keyEvent);
+
+
 		View* getLowestView();
 		View* getParentView();
 	protected:

@@ -117,4 +117,8 @@ void View::buttonPressed(Button* button)
 {
 	
 }
+void View::keyPressed(sf::Event::KeyEvent keyEvent)
+{
+	
+}
 

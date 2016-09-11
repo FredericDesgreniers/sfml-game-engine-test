@@ -59,7 +59,11 @@ void GameView::render(sf::RenderWindow* rWindow)
 			rWindow->draw(tileShape);
 		}
 	}
-
+	sf::RectangleShape playerShape;
+	playerShape.setFillColor(sf::Color::Red);
+	playerShape.setSize(sf::Vector2f(TILE_SIZE, TILE_SIZE));
+	playerShape.setPosition(mapPosition + sf::Vector2f(player.getPosX()*TILE_SIZE, player.getPosY()*TILE_SIZE));
+	rWindow->draw(playerShape);
 }
 void GameView::update(sf::RenderWindow* rWindow)
 {
@@ -70,4 +74,26 @@ void GameView::update(sf::RenderWindow* rWindow)
 void GameView::buttonPressed(Button* button)
 {
 
+}
+void GameView::keyPressed(sf::Event::KeyEvent keyEvent)
+{
+	switch (keyEvent.code)
+	{
+	case sf::Keyboard::W:
+		if (player.getPosY() > 0)
+			player.moveUp(1);
+		break;
+	case sf::Keyboard::S:
+		if (player.getPosY()+1 < map.getHeight())
+			player.moveDown(1);
+		break;
+	case sf::Keyboard::A:
+		if (player.getPosX() > 0)
+			player.moveLeft(1);
+		break;
+	case sf::Keyboard::D:
+		if (player.getPosX()+1 < map.getHeight())
+			player.moveRight(1);
+		break;
+	}
 }
