@@ -1,3 +1,5 @@
-﻿  game.cpp
+﻿  gameView.cpp
+p:\comp 345\game\game\game\gameview.cpp(29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+p:\comp 345\game\game\game\gameview.cpp(43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Game.vcxproj -> P:\comp 345\Game\Game\x64\Debug\Game.exe
   Game.vcxproj -> P:\comp 345\Game\Game\x64\Debug\Game.pdb (Partial PDB)
