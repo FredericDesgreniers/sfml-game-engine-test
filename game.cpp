@@ -11,7 +11,7 @@ using namespace MainEngine;
  */
 void Game::run()
 {
-
+	window->setFramerateLimit(30);
 	while (window->isOpen())
 	{
 
