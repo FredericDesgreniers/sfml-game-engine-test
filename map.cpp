@@ -13,7 +13,7 @@ Map::Map(int width, int height)
 		grid[y] = new GridPosition*[width];
 		for (int x = 0; x < width; x++)
 		{
-			grid[y][x] = new GridPosition(x,y,0);
+			grid[y][x] = new GridPosition(x,y,TILE_AIR);
 		}
 	}
 
