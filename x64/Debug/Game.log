@@ -1,6 +1,5 @@
-﻿  gameView.cpp
-p:\comp 345\game\game\game\gameview.cpp(29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-p:\comp 345\game\game\game\gameview.cpp(43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-p:\comp 345\game\game\game\gameview.cpp(65): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  titleView.cpp
+p:\comp 345\game\game\game\titleview.cpp(31): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+p:\comp 345\game\game\game\titleview.cpp(34): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
   Game.vcxproj -> P:\comp 345\Game\Game\x64\Debug\Game.exe
   Game.vcxproj -> P:\comp 345\Game\Game\x64\Debug\Game.pdb (Partial PDB)
