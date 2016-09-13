@@ -26,7 +26,7 @@ void Game::run()
 			case sf::Event::MouseButtonPressed:
 				currentView->getLowestView()->onLeftMousePress(sf::Mouse::getPosition(*window));
 				break;
-			case sf::Event::KeyPressed:
+			case sf::Event::KeyPressed: 
 				currentView->getLowestView()->keyPressed(event.key);
 			}
 		}

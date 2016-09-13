@@ -6,12 +6,13 @@ using namespace ViewEngine;
 
 GameView::GameView(MainEngine::Game* game) :View(game), map(20, 20), player(10, 10, 100)
 {
-
+	this->game = game;
 }
 
 void GameView::initialize(sf::RenderWindow* rWindow)
 {
 	View::initialize(rWindow);
+	addButton(Button(0,"return",sf::Vector2f(600,10),sf::Vector2f(200,60)));
 }
 
 void GameView::render(sf::RenderWindow* rWindow)
@@ -73,7 +74,12 @@ void GameView::update(sf::RenderWindow* rWindow)
 
 void GameView::buttonPressed(Button* button)
 {
-
+	switch(button->code)
+	{
+	case 0:
+		parentView->removeChildView();
+		break;
+	}
 }
 void GameView::keyPressed(sf::Event::KeyEvent keyEvent)
 {

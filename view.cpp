@@ -82,7 +82,12 @@ void View::setChildView(View* view)
 	if(parentView!=NULL)
 		parentView->setLowestView(childView->getLowestView());
 	setLowestView(childView->getLowestView());
+	childView->setParentView(this);
 
+}
+void View::setParentView(View* view)
+{
+	parentView = view;
 }
 
 void View::setLowestView(View* view)
@@ -122,3 +127,25 @@ void View::keyPressed(sf::Event::KeyEvent keyEvent)
 	
 }
 
+View* View::removeChildView()
+{
+	View* v = childView;
+	childView = NULL;
+	removeLowestView();
+
+	return NULL;
+	
+
+}
+
+View* View::removeLowestView()
+{
+	View* v = lowestView;
+	setLowestView(this);
+	return v;
+}
+
+View::~View()
+{
+	delete &defaultFont;
+}

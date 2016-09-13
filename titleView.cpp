@@ -23,7 +23,7 @@ void TitleView::render(sf::RenderWindow* rWindow)
 	View::render(rWindow);
 	sf::Text text("Dungeons and Dragons", defaultFont, 50);
 	text.setFillColor(sf::Color::White);
-
+	text.setStyle(sf::Text::Style::Italic);
 	text.setPosition(0, 0);
 
 

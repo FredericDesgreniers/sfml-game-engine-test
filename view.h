@@ -15,6 +15,7 @@ namespace ViewEngine
 	{
 	public:
 		View(MainEngine::Game* game);
+		~View();
 		virtual void render(sf::RenderWindow* rWindow);
 		virtual void update(sf::RenderWindow* rWindow);
 		virtual void initialize(sf::RenderWindow* rWindow);
@@ -28,11 +29,15 @@ namespace ViewEngine
 		virtual void keyPressed(sf::Event::KeyEvent keyEvent);
 
 
+		View* removeChildView();
+		View* removeLowestView();
 		View* getLowestView();
 		View* getParentView();
+		
 	protected:
 		void setLowestView(View* view);
-		
+		void setParentView(View* view);
+
 		sf::Font defaultFont;
 		std::vector<Button> buttons;
 		MainEngine::Game* game;
