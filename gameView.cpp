@@ -2,9 +2,10 @@
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/Window/Mouse.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
+#include <iostream>
 using namespace ViewEngine;
 
-GameView::GameView(MainEngine::Game* game) :View(game), map(20, 20), player(10, 10, 100)
+GameView::GameView(MainEngine::Game* game) :View(game), map(30, 30), player(10, 10, 100)
 {
 	this->game = game;
 }
@@ -18,7 +19,7 @@ void GameView::initialize(sf::RenderWindow* rWindow)
 void GameView::render(sf::RenderWindow* rWindow)
 {
 	View::render(rWindow);
-	sf::Text text("This is the game", defaultFont, 50);
+	sf::Text text("Lake Map", defaultFont, 50);
 	text.setFillColor(sf::Color::White);
 
 	text.setPosition(0, 0);
@@ -37,8 +38,6 @@ void GameView::render(sf::RenderWindow* rWindow)
 		for (int y = 0; y < map.getHeight(); y++)
 		{
 			GameEngine::GridPosition* tile = map.getAt(x, y);
-			if (tile->getX() == 2)
-				tile->setId(1);
 			sf::RectangleShape tileShape;
 			tileShape.setSize(sf::Vector2f(TILE_SIZE, TILE_SIZE));
 			tileShape.setPosition(mapPosition + sf::Vector2f(x*TILE_SIZE,y*TILE_SIZE));
@@ -49,7 +48,16 @@ void GameView::render(sf::RenderWindow* rWindow)
 				color = sf::Color::White;
 				break;
 			case TILE_WALL:
-				color = sf::Color::Blue;
+				color = sf::Color(0, 0, 255);
+				break;
+			case TILE_SAND:
+				color = sf::Color::Yellow;
+				break;
+			case TILE_GRASS:
+				color = sf::Color::Green;
+				break;
+			case TILE_WATER_DEEP:
+				color = sf::Color(0, 0, 200);
 				break;
 			default:
 				color = sf::Color::Black;
@@ -61,7 +69,7 @@ void GameView::render(sf::RenderWindow* rWindow)
 		}
 	}
 	sf::RectangleShape playerShape;
-	playerShape.setFillColor(sf::Color::Red);
+	playerShape.setFillColor(sf::Color(255,0,0,200));
 	playerShape.setSize(sf::Vector2f(TILE_SIZE, TILE_SIZE));
 	playerShape.setPosition(mapPosition + sf::Vector2f(player.getPosX()*TILE_SIZE, player.getPosY()*TILE_SIZE));
 	rWindow->draw(playerShape);

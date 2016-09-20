@@ -21,7 +21,7 @@ void TitleView::initialize(sf::RenderWindow* rWindow)
 void TitleView::render(sf::RenderWindow* rWindow)
 {
 	View::render(rWindow);
-	sf::Text text("Dungeons and Dragons", defaultFont, 50);
+	sf::Text text("Game v1", defaultFont, 50);
 	text.setFillColor(sf::Color::White);
 	text.setStyle(sf::Text::Style::Italic);
 	text.setPosition(0, 0);
@@ -47,7 +47,6 @@ void TitleView::update(sf::RenderWindow* rWindow)
 
 void TitleView::buttonPressed(Button* button)
 {
-	std::cout << std::to_string(button->code);
 	switch(button->code)
 	{
 	case 0:
