@@ -18,16 +18,6 @@ void View::render(sf::RenderWindow* rWindow)
 {
 	for (auto &b : buttons)
 	{
-		/*
-		sf::RectangleShape rect(b.getDimension());
-		rect.setPosition(b.getPosition());
-		rect.setFillColor(sf::Color::Transparent);
-		rect.setOutlineColor(sf::Color::White);
-		rect.setOutlineThickness(2);
-		rWindow->draw(rect);
-		*/
-
-
 		sf::Text text(b.getText(), defaultFont, 30);
 		text.setOrigin((text.getGlobalBounds().width / 2), text.getGlobalBounds().height / 2);
 		text.setPosition(b.getPosition().x + (b.getDimension().x / 2), b.getPosition().y + b.getDimension().y / 2); 

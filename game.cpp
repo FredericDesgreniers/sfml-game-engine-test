@@ -11,7 +11,7 @@ using namespace MainEngine;
  */
 void Game::run()
 {
-	window->setFramerateLimit(30);
+	window->setFramerateLimit(15);
 	while (window->isOpen())
 	{
 
@@ -44,7 +44,7 @@ void Game::run()
  */
 void Game::setupWindow()
 {
-	window = new sf::RenderWindow(sf::VideoMode(800,800), "Fred's Game Engine v1");
+	window = new sf::RenderWindow(sf::VideoMode(1000,1000), "Fred's Game Engine v1");
 	
 	renderer = new RenderEngine::Renderer(window);
 }

@@ -28,7 +28,6 @@ namespace ViewEngine
 		virtual void buttonPressed(Button* button);
 		virtual void keyPressed(sf::Event::KeyEvent keyEvent);
 
-
 		View* removeChildView();
 		View* removeLowestView();
 		View* getLowestView();
